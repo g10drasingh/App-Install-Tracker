@@ -63,7 +63,7 @@ def get_target_date() -> str:
 
 def fetch_app_snapshot(app_id: str, friendly_name: str) -> dict:
     """Fetch current Play Store stats for a single app."""
-    details = gplay_app(app_id, lang="en", country="us")
+    details = gplay_app(app_id, lang="en", country="np")
     return {
         "app_id": app_id,
         "app_name": details.get("title") or friendly_name,
