@@ -120,7 +120,7 @@ def append_rows(csv_path: str, fieldnames: list, rows: list[dict]) -> None:
 
 def fetch_app_snapshot(app_id: str, friendly_name: str) -> dict:
     """Fetch current Play Store stats for a single app."""
-    details = gplay_app(app_id, lang="en", country="us")
+    details = gplay_app(app_id, lang="en", country="np")
     return {
         "app_id": app_id,
         "app_name": details.get("title") or friendly_name,
