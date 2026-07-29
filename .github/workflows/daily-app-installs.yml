@@ -2,8 +2,8 @@ name: Daily App Install Count
 
 on:
   schedule:
-    # 09:00 NPT (Nepal is UTC+5:45) = 03:15 UTC
-    - cron: "15 3 * * *"
+    # 04:00 NPT (Nepal is UTC+5:45) = 03:15 UTC
+    - cron: "0 4 * * *"
   workflow_dispatch: {}   # lets you trigger it manually from the Actions tab
 
 permissions:
@@ -14,12 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
-          python-version: "3.11"
+          python-version: "3.13"
 
       - name: Install dependencies
         run: pip install -r requirements.txt
